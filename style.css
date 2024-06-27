@@ -252,18 +252,45 @@ nav button:hover {
 .about .aboutme h4{
     font-size: 64px;
     color: var(--fifth-color);
+    margin-top: 0px;
+    margin-bottom: 10px;
 }
 
 .about .aboutme p{
     display: flex;
     font-size: 20px;
     margin-top: 0;
-    margin-bottom: 0;
     margin-right: 400px;
 }
 
 .about .aboutme span{
     animation: blink 1s ease-in-out infinite;
+}
+
+.about .icons{
+    position: relative;
+    display: flex;
+    font-size: 30px;
+    gap: 20px;
+    color: var(--fifth-color);
+}
+
+.about .icons .ri-linkedin-box-fill:hover {
+    font-size: 30px;
+    color: #fff;
+    animation: rotate 0.5s ease-in;
+}
+
+.about .icons .ri-facebook-box-fill:hover {
+    font-size: 30px;
+    color: #fff;
+    animation: rotate 0.5s ease-in;
+}
+
+.about .icons .ri-instagram-fill:hover {
+    font-size: 30px;
+    color: #fff;
+    animation: rotate 0.5s ease-in;
 }
 
 @keyframes blink {
@@ -274,7 +301,36 @@ nav button:hover {
         opacity: 1;
     }
 }
-.projects {}
+
+.container {
+    position: relative;
+    height: 75vh;
+    width: 100%;
+    background-color: var(--secondary-color);
+    margin-top: 50px;
+    
+}
+
+.container canvas {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0.2;
+    z-index: 0;
+}
+
+.projects {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.projects h4 {
+    font-size: 50px;
+}
 
 .skills {}
 
