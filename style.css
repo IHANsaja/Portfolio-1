@@ -156,6 +156,7 @@ nav button:hover {
     bottom: 0;
     border-radius: 100%;
     z-index: -1;
+    overflow: hidden;
 }
 
 .img-wrapper::before {
@@ -166,6 +167,12 @@ nav button:hover {
 .img-wrapper::after {
     background-color: var(--third-color);
     animation: animeA 8s ease-in-out infinite;
+}
+
+.img-wrapper img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .overview pre {
