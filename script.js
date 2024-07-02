@@ -80,3 +80,11 @@ document.getElementById('downloadBtn').addEventListener('click', function() {
 document.getElementById("downloadBtn").addEventListener("click", function() {
     window.location.href = "https://github.com/IHANsaja";
 });
+
+window.addEventListener('load', function() {
+    const loadingScreen = document.getElementById('loader');
+    const content = document.getElementById('content');
+    
+    loadingScreen.style.display = 'none';
+    content.style.display = 'block';
+});
