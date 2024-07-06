@@ -118,6 +118,7 @@ nav button:hover {
     cursor: pointer;
     font-size: 30px;
     font-weight: 1000;
+    margin: 0;
 }
 
 .hamburger i:hover{
@@ -141,6 +142,11 @@ nav button:hover {
     flex-direction: column;
     background-color: var(--background-color);
     align-items: end;
+    box-shadow: 0px 0px 10px rgba(22, 219, 101, 0.5);
+    padding: 15px;
+    border-radius: 10px;
+    transform-origin: center bottom;
+    transform-box: 10px 10px;
 }
 
 .mobile-menu i{
@@ -181,10 +187,10 @@ nav button:hover {
 .Home .welcome{
     display: flex;
     font-size: 20px;
-    margin-top: 0;
-    margin-right: 100px;
+    margin-top: 10px;
+    margin-right: 10%;
     text-align: justify;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .Home .img-wrapper {
@@ -262,10 +268,6 @@ nav button:hover {
     color: black;
 }
 
-.space{
-    margin-top: 250px;
-}
-
 @keyframes animeA {
     0% {
         border-radius: 31% 69% 32% 68% / 52% 61% 39% 48%;
@@ -319,7 +321,7 @@ nav button:hover {
     display: flex;
     font-size: 20px;
     margin-top: 0;
-    margin-right: 100px;
+    margin-right: 10%;
     text-align: justify;
 }
 
@@ -363,6 +365,7 @@ nav button:hover {
     max-height: 800px;
     overflow: hidden;
     margin: auto;
+    margin-bottom: 0;
     box-sizing: border-box;
     box-shadow: -5px -5px 5px rgba(255, 255, 255, 0.1), 10px 10px 10px rgba(0, 0, 0, 0.4),
     inset -5px -5px 5px rgba(255, 255, 255, 0.1), inset 10px 10px 10px rgba(0, 0, 0, 0.4);
@@ -503,6 +506,10 @@ nav button:hover {
         cursor: pointer;
     }
 
+    .nav{
+        padding: 0;
+    }
+
     .nav .nav-links{
         display: none;
     }
@@ -517,6 +524,7 @@ nav button:hover {
 
     .hamburger {
         display: flex;
+        padding: 10px;
         position: fixed;
     }
 
@@ -535,7 +543,7 @@ nav button:hover {
     height: 75vh;
     width: 100%;
     background-color: var(--secondary-color);
-    margin-top: 150px;
+    margin-top: 50px;
     
 }
 
