@@ -216,7 +216,6 @@ nav button:hover {
     bottom: 0;
     border-radius: 100%;
     z-index: -1;
-    
 }
 
 .img-wrapper::before {
