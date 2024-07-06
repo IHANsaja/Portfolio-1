@@ -437,8 +437,16 @@ nav button:hover {
         margin-left: 10%;
     }
 
+    .Home h4{
+        font-size: 50px;
+    }
+
     .Home .welcome{
         font-size: 14px;
+    }
+
+    .Home p{
+        font-size: 36px;
     }
 
     .about {
