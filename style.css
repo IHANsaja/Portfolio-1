@@ -452,8 +452,12 @@ nav button:hover {
     .about {
         display: flex;
         flex-direction: column;
-        text-align: center;
         gap: 10px;
+        font-size: 14px;
+    }
+
+    .about .aboutme h4{
+        font-size: 50px;
     }
 
     .icons {
