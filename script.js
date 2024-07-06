@@ -61,30 +61,25 @@ banner.addEventListener('mousemove', (event) => {
 });
 
 banner.addEventListener('mouseleave', () => {
-    clearCanvas(); // Clear the canvas when the cursor leaves the banner
+    clearCanvas(); 
 });
 
-document.getElementById('downloadBtn').addEventListener('click', function() {
-    var button = this;
-    button.classList.add('loading');
+const hamburger = document.querySelector('.hamburger');
+const mobileMenu = document.querySelector('.mobile-menu');
+const closeIcon = document.querySelector('.close-icon');
 
-    // Simulate download process with a timeout (e.g., 3 seconds)
-    setTimeout(function() {
-        button.classList.remove('loading');
-        // Trigger the actual download (replace with actual CV link)
-        window.location.href = 'path/to/your/cv.pdf';
-    }, 3000);
+hamburger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('active');
 });
+
+closeIcon.addEventListener('click', () => {
+    mobileMenu.classList.remove('active');
+});
+
 
 
 document.getElementById("downloadBtn").addEventListener("click", function() {
     window.location.href = "https://github.com/IHANsaja";
 });
 
-window.addEventListener('load', function() {
-    const loadingScreen = document.getElementById('loader');
-    const content = document.getElementById('content');
-    
-    loadingScreen.style.display = 'none';
-    content.style.display = 'block';
-});
+
