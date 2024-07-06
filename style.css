@@ -433,9 +433,10 @@ nav button:hover {
         display: flex;
         flex-direction: column;
         gap: 100px;
-        margin: 0px;
+        margin-top: 0px;
         margin-left: 10%;
         margin-right: 5%;
+        margin-bottom: 50px;
     }
 
     .Home h4{
@@ -453,7 +454,7 @@ nav button:hover {
     }
 
     .Home p{
-        font-size: 34px;
+        font-size: 32px;
         margin-top: 0;
     }
 
