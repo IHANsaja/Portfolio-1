@@ -432,7 +432,9 @@ nav button:hover {
 }
 
 @media (max-width: 1024px) {
-
+    body{
+        overflow-x: hidden;
+    }
     .Home{
         display: flex;
         flex-direction: column;
