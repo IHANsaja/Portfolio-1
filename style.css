@@ -536,6 +536,16 @@ nav button:hover {
         margin-right: 10%;
     }
 
+    .boxlogo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .boxlogo i{
+        font-size: 30px;
+    }
+
     .row1-skills {
       display: flex; 
       flex-direction: column !important;
@@ -645,6 +655,16 @@ nav button:hover {
   font-size: 50px;
   align-items: center;
   justify-content: center;
+}
+
+.boxlogo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boxlogo i{
+    font-size: 50px;
 }
 
 .row1-skills{
