@@ -977,7 +977,7 @@ nav button:hover {
     transition: 0.5s ease-in-out;
 }
 
-.cardheader button{
+  .cardheader button{
     margin-top: 10px;
     display: flex;
     align-items: center;
@@ -995,22 +995,22 @@ nav button:hover {
     box-shadow: none;
     border: none;
     transition: 0.5s ease-in-out;
-}
+  }
 
-.cardheader button i{
+  .cardheader button i{
     font-size: 25px;
-}
+  }
 
-.cardheader button:hover{
+  .card:hover button{
     background-color: var(--fourth-color);
     color: #fff;
-}
+  }
 
-  .cardheader img:hover{
+  .card:hover img{
     filter: blur(0px);
   }
 
-  .cardheader h2:hover {
+  .card:hover h2{
     background: linear-gradient(270deg, #00ff43, #04471c);
     -webkit-background-clip: text;
     background-clip: text;
@@ -1081,10 +1081,11 @@ nav button:hover {
   }
 
   .skil p{
-    padding: 4px 8px;
+    padding: 6px 8px;
     background-color: #17141d;
     color: #fff;
-    width: 60px;
+    width: 70px;
+    font-size: 15px;
     border: 1px solid #ccc;
     border-radius: 20px;
     box-shadow: inset 0px 0px 7px rgba(78, 78, 78, 0.6), 0px 0px 1px rgba(65, 65, 65, 0.3);
