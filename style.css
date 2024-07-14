@@ -1081,12 +1081,13 @@ nav button:hover {
   }
 
   .skil p{
+    box-sizing:content-box;
     margin-bottom: 10px;
     padding: 6px 8px;
     background-color: #17141d;
     color: #fff;
     width: 70px;
-    font-size: 15px;
+    font-size: 13px;
     border: 1px solid #ccc;
     border-radius: 20px;
     box-shadow: inset 0px 0px 7px rgba(78, 78, 78, 0.6), 0px 0px 1px rgba(65, 65, 65, 0.3);
