@@ -82,4 +82,49 @@ document.getElementById("downloadBtn").addEventListener("click", function() {
     window.location.href = "https://github.com/IHANsaja";
 });
 
-
+function moveLeft() {
+    const slides = document.querySelectorAll('.certify .slide');
+    const labels = document.querySelectorAll('.certify input[type="radio"]');
+    
+    let checkedIndex = -1;
+    
+    // Find the currently checked slide
+    for (let i = 0; i < labels.length; i++) {
+      if (labels[i].checked) {
+        checkedIndex = i;
+        break;
+      }
+    }
+    
+    // If not the first slide, move to the previous slide
+    if (checkedIndex > 0) {
+      labels[checkedIndex - 1].checked = true;
+    } else {
+      // Otherwise, wrap around to the last slide
+      labels[labels.length - 1].checked = true;
+    }
+  }
+  
+  // JavaScript function to move to the next slide
+  function moveRight() {
+    const slides = document.querySelectorAll('.certify .slide');
+    const labels = document.querySelectorAll('.certify input[type="radio"]');
+    
+    let checkedIndex = -1;
+    
+    // Find the currently checked slide
+    for (let i = 0; i < labels.length; i++) {
+      if (labels[i].checked) {
+        checkedIndex = i;
+        break;
+      }
+    }
+    
+    // If not the last slide, move to the next slide
+    if (checkedIndex < labels.length - 1) {
+      labels[checkedIndex + 1].checked = true;
+    } else {
+      // Otherwise, wrap around to the first slide
+      labels[0].checked = true;
+    }
+  }

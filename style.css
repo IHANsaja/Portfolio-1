@@ -1102,35 +1102,78 @@ nav button:hover {
     box-shadow: inset 0px 0px 15px rgba(78, 78, 78, 0.6);
   }
 
-
-  .certifyBanner{
-    width: 100%;
-    height: 100vh;
-    text-align: center;
-    overflow: hidden;
+  .certify {
     position: relative;
+    width: 100%;
+    height: 95vh; /* Adjusted to use 95% of viewport height */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    overflow: hidden;
   }
-
-  .certifyBanner .slider{
+  
+  .certify .slide {
+    display: flex;
     position: absolute;
-    width: 200px;
-    height: 250px;
-    top: 10%;
-    left: calc(50% - 100px);
-    transform-style: preserve-3d;
-    transform: perspective(1000px);
-  }
-
-  .certifyBanner .slider .item{
-    position: absolute;
-    inset: 0 0 0 0;
-    transform: 
-      rotateY(calc((var(--position) - 1)*(360/var(--quantity))*1deg))
-      translateZ(550px);
-  }
-
-  .certifyBanner .slider .item img{
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  }
+  
+  .certify input:checked + label + .slide {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .certify input + label {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: solid 2px white;
+    border-radius: 999px;
+    background-color: transparent;
+    margin: 0 6px;
+    margin-top: 700px;
+    z-index: 2;
+    cursor: pointer;
+    transition-duration: .4s;
+    box-shadow: 0 0 20px 0 #000;
+  }
+  
+  .certify input:checked + label {
+    background-color: white;
+  }
+  .certify input:focus + label {
+    box-shadow: 0 0 0 2px teal, 0 0 18px white;
+  }
+  
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+    color: #333;
+  }
+  
+  .arrow.left {
+    left: 20px; 
+  }
+  
+  .arrow.right {
+    right: 20px;
+  }
+  
+  .arrow i {
+    font-size: 24px;
   }

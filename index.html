@@ -376,17 +376,33 @@ CV for a comprehensive overview of my professional background.</p>
 
     <!--Certificates Section-->
     <div class="certify">
-        <div class="certifyBanner">
-            <div class="slider" style="--quantity: 6">
-                <div class="item" style="--position: 1"><img src="assets/c1.jpeg" alt=""></div>
-                <div class="item" style="--position: 2"><img src="assets/c3.jpg" alt=""></div>
-                <div class="item" style="--position: 3"><img src="assets/c4.jpg" alt=""></div>
-                <div class="item" style="--position: 4"><img src="assets/c5.jpg" alt=""></div>
-                <div class="item" style="--position: 5"><img src="" alt=""></div>
-                <div class="item" style="--position: 6"><img src="" alt=""></div>
-            </div>
-        </div>
+        <input type="radio" id="trigger1" name="slider">
+        <label for="trigger1"><span class="sr-only"></span></label>
+        <div class="slide bg1"><img src="assets/c1.jpeg" alt="" width="800px"></div>
+      
+        <input type="radio" id="trigger2" name="slider">
+        <label for="trigger2"><span class="sr-only"></span></label>
+        <div class="slide bg2"><img src="assets/c5.jpg" alt="" width="800px"></div>
+      
+        <input type="radio" id="trigger3" name="slider">
+        <label for="trigger3"><span class="sr-only"></span></label>
+        <div class="slide bg3"><img src="assets/c3.jpg" alt="" width="800px"></div>
+      
+        <input type="radio" id="trigger4" name="slider">
+        <label for="trigger4"><span class="sr-only"></span></label>
+        <div class="slide bg4"><img src="assets/c4.jpg" alt="" width="800px"></div>
+      
+        <input type="radio" id="trigger5" name="slider">
+        <label for="trigger5"><span class="sr-only"></span></label>
+        <div class="slide bg5"><img src="assets/c5.jpg" alt="" width="800px"></div>
+      
+        <!-- Navigation buttons -->
+        <button class="arrow left" onclick="moveLeft()"><i class="ri-arrow-left-fill"></i></button>
+        <button class="arrow right" onclick="moveRight()"><i class="ri-arrow-right-fill"></i></button>
     </div>
+      
+      
+
 
     <!--Contact Section-->
     <div class="contact">
