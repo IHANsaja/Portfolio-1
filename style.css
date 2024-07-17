@@ -689,6 +689,65 @@ nav button:hover {
     .cardlist .card:first-child {
         background: none; /* Removed specific background for first card on hover */
     }
+
+    .certify {
+      height: 90vh; /* Adjust the height to better fit smaller screens */
+  }
+
+  .certify .slider-thumb {
+      left: 20%; /* Adjust position for smaller screens */
+      top: 15%; /* Adjust position for smaller screens */
+      width: 300px; /* Smaller width for mobile screens */
+      height: 300px; /* Smaller height for mobile screens */
+  }
+
+  .certify .slide img {
+      width: 90%; /* Make the images responsive */
+  }
+
+  .certify input + label {
+      width: 8px; /* Adjust dot size for mobile screens */
+      height: 8px; /* Adjust dot size for mobile screens */
+      margin: 0 4px; /* Adjust margin for smaller screens */
+  }
+
+  .arrow {
+      padding: 8px; /* Adjust arrow button padding for mobile screens */
+  }
+
+  .arrow.left {
+      left: 10px; /* Adjust position for smaller screens */
+  }
+
+  .arrow.right {
+      right: 10px; /* Adjust position for smaller screens */
+  }
+
+  .arrow i {
+      font-size: 20px; /* Adjust icon size for smaller screens */
+  }
+  .certify .slide img {
+    width: 100vw;
+    object-fit: cover;
+  }
+
+  .cardheader img{
+    width: 250px !important;
+  }
+
+  .cardheader h2{
+    font-size: 18px !important;
+  }
+
+  .skil{
+    flex-wrap: wrap;
+  }
+
+  .skil p{
+    width: 50px !important; 
+    font-size: 10px !important;
+    margin-bottom: 0px;
+  }
 }
 
 .skills {
@@ -944,6 +1003,7 @@ nav button:hover {
     font-size: 50px;
     color: #fff;
     display: flex;
+    cursor: pointer;
   }
   
   .card h4{
@@ -1125,6 +1185,14 @@ nav button:hover {
     transform: translateX(-100%);
     transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
   }
+
+  .certify .slide img{
+    transition: 0.4s ease-in-out;
+  }
+
+  .certify .slide img:hover {
+    box-shadow: 0px 0px 20px var(--background-color);
+  }
   
   .certify input:checked + label + .slide {
     opacity: 1;
@@ -1135,7 +1203,7 @@ nav button:hover {
     display: inline-block;
     width: 12px;
     height: 12px;
-    border: solid 2px white;
+    border: solid 2px var(--third-color);
     border-radius: 999px;
     background-color: transparent;
     margin: 0 6px;
@@ -1147,23 +1215,32 @@ nav button:hover {
   }
   
   .certify input:checked + label {
-    background-color: white;
+    background-color: #00ff43;
   }
   .certify input:focus + label {
     box-shadow: 0 0 0 2px teal, 0 0 18px white;
   }
+
+  .certify input[type="radio"] {
+    display: none;
+}
   
   .arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(0, 255, 67, 0.8);
     border: none;
     padding: 10px;
     cursor: pointer;
     border-radius: 50%;
     z-index: 10;
-    color: #333;
+    color: var(--background-color);
+    transition: 0.4s ease-in-out;
+  }
+
+  .arrow:hover{
+    filter: drop-shadow(0px 0px 5px #ffffff);
   }
   
   .arrow.left {
@@ -1177,3 +1254,57 @@ nav button:hover {
   .arrow i {
     font-size: 24px;
   }
+
+.certify {
+  height: 100vh;
+  background: linear-gradient(90deg,#04471c,#058c42);
+}
+
+.certify .slider-thumb {
+  position: absolute;
+  left: 40%;
+  top: 15%;
+  width: 1000px;
+  height: 1000px;
+  background: var(--background-color);
+  border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
+  will-change: border-radius, transform, opacity;
+  animation: sliderShape 5s linear infinite;
+  z-index: 0;
+  display: block;
+}
+
+.certify h4 {
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  font-size: 50px;
+  text-align: center;
+  color: #fff;
+  z-index: 10;
+  margin: 0;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.certify h4 span{
+  animation: blink 1s ease-in-out infinite;
+}
+
+@keyframes sliderShape {
+    0%, 100% {
+        border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+        transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+    }
+    34% {
+        border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
+        transform: translate3d(0, 5px, 0) rotateZ(0.01deg);
+    }
+    50% {
+        transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+    }
+    67% {
+        border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+        transform: translate3d(0, -3px, 0) rotateZ(0.01deg);
+    }
+}
