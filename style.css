@@ -154,6 +154,7 @@ nav button:hover {
     border-radius: 10px;
     transform-origin: center bottom;
     transform-box: 10px 10px;
+    position: absolute;
 }
 
 .mobile-menu i{
@@ -437,14 +438,34 @@ nav button:hover {
 }
 
 @media (max-width: 1024px) {
+    html {
+      overflow-x: hidden;
+      -webkit-overflow-scrolling: none;
+    }
+
     body{
         overflow-x: hidden;
+        -webkit-overflow-scrolling: none;
     }
+
+    .logolink{
+      position: relative;
+      padding: 0;
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    .logo{
+      position: relative;
+    }
+
     .Home{
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: none;
         display: flex;
         flex-direction: column;
         gap: 100px;
-        margin-top: 0px;
+        margin-top: 10%;
         margin-left: 10%;
         margin-right: 5%;
         margin-bottom: 50px;
@@ -479,6 +500,8 @@ nav button:hover {
         display: flex;
         flex-direction: column;
         gap: 10px;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: none;
     }
 
     .about .aboutme p{
@@ -501,6 +524,16 @@ nav button:hover {
         max-width: 300px;
         max-height: 300px;
         margin-top: 20px;
+        overflow-x: hidden;
+    }
+
+    .header{
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      padding-left: 20px;
+      overflow-x: hidden;
+      -webkit-overflow-scrolling: none;
     }
 
     nav{
@@ -508,14 +541,15 @@ nav button:hover {
         border: none;
         position: relative;
         justify-content: flex-end;
-        margin-top: 20px;
-        margin-right: 10%;
         background-color: rgba(13, 40, 24, 0);
         cursor: pointer;
     }
 
     .nav{
         padding: 0;
+        position: relative;
+        margin-top: 5px;
+        z-index: 2;
     }
 
     .nav .nav-links{
@@ -531,14 +565,15 @@ nav button:hover {
     }
 
     .hamburger {
+        margin-top: 50px;
         display: flex;
         padding: 10px;
-        position: fixed;
+        position: absolute;
     }
 
     .mobile-menu.active {
         display: flex;
-        position: relative;
+        position: sticky;
     }
     
     .Home .overview pre{
@@ -560,6 +595,7 @@ nav button:hover {
       flex-direction: column !important;
       justify-content: center;
       align-items: center;
+      gap: 0 !important;
     }
 
     .row2-skills{
@@ -567,10 +603,21 @@ nav button:hover {
       flex-direction: column !important;
       justify-content: center;
       align-items: center;
+      gap: 0 !important;
+    }
+
+    .mob-col{
+      margin-left: 13%;
+      position: relative;
+      display: flex;
+      flex-direction: row;
     }
   
     .skills {
-      height: 200% !important;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: none;
+      height: 100% !important;
       width: 100% !important;
     }
   
@@ -642,6 +689,8 @@ nav button:hover {
     }
 
     .projects {
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: none;
         padding: 20px 0; /* Adjusted padding for smaller screens */
     }
     
@@ -699,6 +748,8 @@ nav button:hover {
     }
 
     .certify {
+      overflow-x: hidden;
+      -webkit-overflow-scrolling: none;
       height: 90vh; /* Adjust the height to better fit smaller screens */
   }
 
@@ -785,6 +836,15 @@ nav button:hover {
     padding: 0;
   }
 
+  .footer{
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: none;
+  }
+
+  .footer svg{
+    height: 300px;
+    width: 200vw;
+  }
 }
 
 .skills {
