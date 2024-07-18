@@ -57,18 +57,24 @@ nav {
     filter: drop-shadow(0px 10px 10px #000);
 }
 
-nav .logo img {
-    width: 30px;
+.logo{
+  margin-left: 3%;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+  padding: 0;
 }
 
-nav .logo {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+.logo img {
+    width: 50px;
 }
 
-nav .logo a {
+.logo a {
     font-weight: 800;
+    font-size: 30px;
+    color: rgba(0, 255, 67, 0.7);
 }
 
 nav .nav-links {
@@ -82,6 +88,11 @@ nav .nav-links {
 nav .nav-links a:hover {
     color: #fff;
     text-shadow: 0px 0px 3px white;
+}
+
+nav .nav-links a:active{
+  text-shadow: 0px 0px 3px rgb(0, 0, 0);
+  color: #16db65;
 }
 
 nav button {
