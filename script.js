@@ -1,3 +1,4 @@
+//draw spiderman effect
 let banner = document.querySelector('.banner');
 let canvas = document.getElementById('spidermanEffect');
 let context = canvas.getContext('2d');
@@ -60,10 +61,12 @@ banner.addEventListener('mousemove', (event) => {
     drawLines(mouse);
 });
 
+//identify when mouseleave and clear the canvas lines
 banner.addEventListener('mouseleave', () => {
     clearCanvas(); 
 });
 
+//hamburger menu functions
 const hamburger = document.querySelector('.hamburger');
 const mobileMenu = document.querySelector('.mobile-menu');
 const closeIcon = document.querySelector('.close-icon');
@@ -77,54 +80,49 @@ closeIcon.addEventListener('click', () => {
 });
 
 
-
+//go to my github account
 document.getElementById("downloadBtn").addEventListener("click", function() {
     window.location.href = "https://github.com/IHANsaja";
 });
 
+// move to left slide
 function moveLeft() {
   const slides = document.querySelectorAll('.certify .slide');
   const labels = document.querySelectorAll('.certify input[type="radio"]');
     
   let checkedIndex = -1;
-    
-  // Find the currently checked slide
+
   for (let i = 0; i < labels.length; i++) {
     if (labels[i].checked) {
       checkedIndex = i;
       break;
     }
   }
-    
-  // If not the first slide, move to the previous slide
+
   if (checkedIndex > 0) {
     labels[checkedIndex - 1].checked = true;
   } else {
-    // Otherwise, wrap around to the last slide
     labels[labels.length - 1].checked = true;
   }
 }
   
-  // JavaScript function to move to the next slide
+//move to the right slide
 function moveRight() {
   const slides = document.querySelectorAll('.certify .slide');
   const labels = document.querySelectorAll('.certify input[type="radio"]');
     
   let checkedIndex = -1;
-    
-  // Find the currently checked slide
+
   for (let i = 0; i < labels.length; i++) {
     if (labels[i].checked) {
       checkedIndex = i;
       break;
     }
   }
-    
-  // If not the last slide, move to the next slide
+
   if (checkedIndex < labels.length - 1) {
     labels[checkedIndex + 1].checked = true;
   } else {
-    // Otherwise, wrap around to the first slide
     labels[0].checked = true;
   }
 }
@@ -149,13 +147,11 @@ document.getElementById('contact-form').addEventListener('submit', function(even
 document.getElementById('contact-form').addEventListener('submit', function(event) {
   event.preventDefault(); // Prevent default form submission
   
-  // Fetch form values
   const name = document.getElementById('name').value;
   const email = document.getElementById('email').value;
   const contactNo = document.getElementById('contact-no').value;
   const message = document.getElementById('message').value;
 
-  // Construct email content
   const subject = 'New Contact Form Submission';
   const body = `
     Name: ${name}
@@ -164,57 +160,54 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     Message: ${message}
   `;
 
-  // Encode email content for URL
   const encodedBody = encodeURIComponent(body);
 
-  // Construct mailto URL
   const mailtoUrl = `mailto:ihanahansaja5@gmail.com?subject=${subject}&body=${encodedBody}`;
 
   // Open mail client
   window.open(mailtoUrl);
 
-  // Optionally, clear the form after submission
+  // clear the form after submission
   this.reset();
 });
 
 //onscroll content load animation
 const scrollElements = document.querySelectorAll(".js-scroll");
 
-        const elementInView = (el, offset = 100) => {
-            const elementTop = el.getBoundingClientRect().top;
-            return (
-                elementTop <= (window.innerHeight || document.documentElement.clientHeight) - offset
-            );
-        };
+  const elementInView = (el, offset = 100) => {
+    const elementTop = el.getBoundingClientRect().top;
+    return (
+      elementTop <= (window.innerHeight || document.documentElement.clientHeight) - offset
+    );
+  };
 
-        const elementOutofView = (el, offset = 100) => {
-            const elementBottom = el.getBoundingClientRect().bottom;
-            return (
-                elementBottom > (window.innerHeight || document.documentElement.clientHeight) + offset
-            );
-        };
+  const elementOutofView = (el, offset = 100) => {
+    const elementBottom = el.getBoundingClientRect().bottom;
+    return (
+      elementBottom > (window.innerHeight || document.documentElement.clientHeight) + offset
+    );
+  };
 
-        const displayScrollElement = (element) => {
-            element.classList.add("scrolled");
-        };
+  const displayScrollElement = (element) => {
+    element.classList.add("scrolled");
+  };
 
-        const hideScrollElement = (element) => {
-            element.classList.remove("scrolled");
-        };
+  const hideScrollElement = (element) => {
+    element.classList.remove("scrolled");
+  };
 
-        const handleScrollAnimation = () => {
-            scrollElements.forEach((el) => {
-                if (elementInView(el, 100)) {
-                    displayScrollElement(el);
-                } else if (elementOutofView(el, 100)) {
-                    hideScrollElement(el);
-                }
-            });
-        };
+  const handleScrollAnimation = () => {
+    scrollElements.forEach((el) => {
+      if (elementInView(el, 100)) {
+        displayScrollElement(el);
+      } else if (elementOutofView(el, 100)) {
+        hideScrollElement(el);
+      }
+    });
+  };
 
-        window.addEventListener("scroll", () => { 
-            handleScrollAnimation();
-        });
+  window.addEventListener("scroll", () => { 
+    handleScrollAnimation();
+  });
         
-        // Initial check in case elements are in view on load
-        handleScrollAnimation();
+  handleScrollAnimation();
