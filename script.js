@@ -128,3 +128,93 @@ function moveRight() {
     labels[0].checked = true;
   }
 }
+
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent default form submission
+
+  // You can add validation or AJAX submission here
+  // For now, let's just log the form data
+  const formData = new FormData(this);
+  formData.forEach((value, key) => {
+    console.log(`${key}: ${value}`);
+  });
+
+  // Optionally, clear the form after submission
+  this.reset();
+});
+
+
+//Conatact form
+
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent default form submission
+  
+  // Fetch form values
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const contactNo = document.getElementById('contact-no').value;
+  const message = document.getElementById('message').value;
+
+  // Construct email content
+  const subject = 'New Contact Form Submission';
+  const body = `
+    Name: ${name}
+    Email: ${email}
+    Contact No: ${contactNo}
+    Message: ${message}
+  `;
+
+  // Encode email content for URL
+  const encodedBody = encodeURIComponent(body);
+
+  // Construct mailto URL
+  const mailtoUrl = `mailto:ihanahansaja5@gmail.com?subject=${subject}&body=${encodedBody}`;
+
+  // Open mail client
+  window.open(mailtoUrl);
+
+  // Optionally, clear the form after submission
+  this.reset();
+});
+
+//onscroll content load animation
+const scrollElements = document.querySelectorAll(".js-scroll");
+
+        const elementInView = (el, offset = 100) => {
+            const elementTop = el.getBoundingClientRect().top;
+            return (
+                elementTop <= (window.innerHeight || document.documentElement.clientHeight) - offset
+            );
+        };
+
+        const elementOutofView = (el, offset = 100) => {
+            const elementBottom = el.getBoundingClientRect().bottom;
+            return (
+                elementBottom > (window.innerHeight || document.documentElement.clientHeight) + offset
+            );
+        };
+
+        const displayScrollElement = (element) => {
+            element.classList.add("scrolled");
+        };
+
+        const hideScrollElement = (element) => {
+            element.classList.remove("scrolled");
+        };
+
+        const handleScrollAnimation = () => {
+            scrollElements.forEach((el) => {
+                if (elementInView(el, 100)) {
+                    displayScrollElement(el);
+                } else if (elementOutofView(el, 100)) {
+                    hideScrollElement(el);
+                }
+            });
+        };
+
+        window.addEventListener("scroll", () => { 
+            handleScrollAnimation();
+        });
+        
+        // Initial check in case elements are in view on load
+        handleScrollAnimation();
