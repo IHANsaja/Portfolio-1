@@ -11,7 +11,6 @@ Welcome to my portfolio website! This site showcases my skills, projects, and ex
 - **Interactive Elements:** Utilizes animations and transitions to create an engaging user experience.
 - **Project Showcase:** Displays my projects with detailed descriptions, images, and links to live demos and repositories.
 - **Contact Form:** Easy-to-use contact form for visitors to reach out to me directly.
-- **Blog Section:** A dedicated space for sharing articles, tutorials, and insights on design and development.
 
 ### Tech Stack
 
