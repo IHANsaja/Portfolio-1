@@ -543,6 +543,7 @@ nav button:hover {
   }
 
   .header{
+    position: static;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
