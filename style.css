@@ -18,6 +18,14 @@ body {
     -ms-overflow-style: none;
 }
 
+body::-webkit-scrollbar-track{
+  background-color: #000;
+}
+
+body::-webkit-scrollbar-thumb{
+  background-color: var(--fourth-color);
+}
+
 /*JS banner (Spiderman Effect)*/
 
 .banner {
