@@ -5,6 +5,10 @@
 
 Welcome to my portfolio website! This site showcases my skills, projects, and experiences as a graphic designer and developer. I built this site to provide an interactive and visually appealing way to present my work, and to make it easier for potential clients and employers to get to know me and my capabilities.
 
+### Navigate
+
+- **Navigate to the website:** [![View Portfolio](https://img.shields.io/badge/Visit%20Pet%20Care%20Website-05122A?style=for-the-badge&logo=github)](https://ihansaja.github.io/Portfolio-1/)
+
 ### Features
 
 - **Responsive Design:** The site is fully responsive, ensuring a seamless experience across all devices, including desktops, tablets, and mobile phones.
