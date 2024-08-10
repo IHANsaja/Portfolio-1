@@ -7,7 +7,7 @@ Welcome to my portfolio website! This site showcases my skills, projects, and ex
 
 ### Navigate
 
-- **Navigate to the website:** [![View Portfolio](https://img.shields.io/badge/Visit%20Pet%20Care%20Website-05122A?style=for-the-badge&logo=github)](https://ihansaja.github.io/Portfolio-1/)
+- **Navigate to the website:** [![View Portfolio](https://img.shields.io/badge/View%20Portfolio-05122A?style=for-the-badge&logo=github)](https://ihansaja.github.io/Portfolio-1/)
 
 ### Features
 
