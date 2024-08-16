@@ -43,4 +43,4 @@ During the development, I focused on several key CSS aspects to enhance the user
 - Fixed horizontal scrolling issues on mobile browsers, ensuring a smooth and user-friendly mobile experience.
 - Integrated a certificate carousel that functions correctly, displaying certificates in an orderly and interactive manner.
 
-Feel free to explore my portfolio and reach out if you have any questions or opportunities!!!
+Feel free to explore my portfolio and reach out if you have any questions or opportunities!
